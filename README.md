@@ -1,2 +1,2 @@
 # Monopoly-Game
-Self Imposed Summer Project
+Self Imposed Project
