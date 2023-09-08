@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import javax.math.random;
+import java.util.Random;
 
 public class Dice extends ArrayList<Integer>{
     private int d1, d2, d3, d4, d5, d6;
@@ -14,7 +14,7 @@ public class Dice extends ArrayList<Integer>{
     }
 
     public int roll(){
-        return 
+        return 3;
     }
     
 }
