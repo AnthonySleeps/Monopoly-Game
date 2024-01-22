@@ -2,5 +2,6 @@ public enum SpaceType {
     TAX,
     FREE_SPACE,
     PROPERTY,
-    CHANCE
+    CHANCE,
+    INCOME,
 }

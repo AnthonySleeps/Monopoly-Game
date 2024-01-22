@@ -1,7 +1,11 @@
+import java.util.ArrayList;
+
 public class Player {
     private String name;
     private int order;
     int cash;
+    private ArrayList<Space> ownedSpaces;
+    private Space currentSpace;
 
     
     public Player(String n, int o){
@@ -24,5 +28,9 @@ public class Player {
     
     public void setOrder(int order) {
         this.order = order;
+    }
+    
+    public boolean buySpace() {
+    	if (currentSpace)
     }
 }

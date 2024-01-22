@@ -25,7 +25,7 @@ public class Space {
                 } else {
                     owned = true;
                     rent = r;
-                    price = p;
+                    price = 0;
                 }
                 break;
             case CHANCE:
@@ -33,6 +33,11 @@ public class Space {
                 price = 0;
                 rent = 0;
                 break;
+            case INCOME: 
+            	owned = false;
+            	price = 0;
+            	rent = r * -1;
+            	
         }
     }
 
