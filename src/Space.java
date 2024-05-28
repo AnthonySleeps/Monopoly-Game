@@ -4,8 +4,9 @@ public class Space {
     private int price;
     private int rent;
     private SpaceType type;
+    private String name;
 
-    public Space(SpaceType t ,int p, int r, Player owner){
+    public Space(SpaceType t , String n, int r, int p){
         switch(type) {
             case TAX:
                 owned = true;
@@ -40,6 +41,8 @@ public class Space {
             	
         }
     }
+    
+
 
 
     public boolean isOwned() {

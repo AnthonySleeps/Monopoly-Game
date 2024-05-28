@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Player {
     private String name;
@@ -31,6 +32,23 @@ public class Player {
     }
     
     public boolean buySpace() {
-    	if (currentSpace)
+    	if (currentSpace.isOwned()) {
+    		return false;
+    	} else if(cash >= currentSpace.getPrice() && wantsToBuy()) {
+    		cash -= currentSpace.getPrice();
+    		currentSpace.setOwner(this);
+    		return true;
+    	}
+    	return false;
+    }
+    
+    public boolean wantsToBuy() {
+    	Scanner askBuy = new Scanner(System.in);
+    	System.out.println("do you want to purchase " + currentSpace + " ?" );
+    	String answer = askBuy.next();
+    	if (answer.equals("yes"))
+    		return true;
+    	
+    	return false;
     }
 }
