@@ -9,9 +9,9 @@ public class Player {
     private Space currentSpace;
 
     
-    public Player(String n, int o){
+    public Player(String n){
         name = n;
-        order = o;
+        
         cash = 2500;
     }
 

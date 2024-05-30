@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 public class Space {
     private boolean owned; 
     private Player owner;
@@ -5,8 +7,11 @@ public class Space {
     private int rent;
     private SpaceType type;
     private String name;
-
-    public Space(SpaceType t , String n, int r, int p){
+    private Color color;
+    
+    public Space(SpaceType t , String n, int r, int p, Color c){
+    	type = t;
+    	color = c;
         switch(type) {
             case TAX:
                 owned = true;
@@ -40,6 +45,7 @@ public class Space {
             	rent = r * -1;
             	
         }
+        name = n;
     }
     
 
@@ -72,6 +78,9 @@ public class Space {
     public int getRent() {
         return rent;
     }
+    public String getName() {
+    	return name;
+    }
     
     public void setRent(int rent) {
         this.rent = rent;
@@ -83,6 +92,10 @@ public class Space {
 
     public void setType(SpaceType type) {
         this.type = type;
+    }
+    
+    public Color getColor() {
+    	return color;
     }
 
 
